@@ -1,0 +1,30 @@
+body {
+  background: #bdc3c7;  
+  background: -webkit-linear-gradient(to right, #2c3e50, #bdc3c7);  
+  background: linear-gradient(to right, #2c3e50, #bdc3c7); 
+}
+h1 {
+  font-size: 66px;
+  font-weight: bold;
+  color: white;
+  font-family: anton;
+}
+h6 {
+  color: whitesmoke;
+  font-family: oxygen;
+  font-weight: bold;
+}
+#messages {
+    height: 200px;
+    background-color: #eee;
+    font-size: 12px;
+    padding: 20px;
+  }
+  
+  input {
+    width: 100%;
+  }
+  
+  #submit {
+    width: 100%;
+  }
