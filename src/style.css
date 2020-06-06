@@ -38,3 +38,7 @@ h6 {
   #submit {
     width: 100%;
   }
+
+  img {
+    float: right;
+  }

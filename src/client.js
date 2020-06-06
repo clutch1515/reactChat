@@ -6,7 +6,7 @@ import React from "react";
 import ReactDOM from "react-dom";
 import { useEffect, useState } from "react";
 import moment from "moment";
-
+import pic from "../public/monogram.svg"
 
 const username = prompt("what is your username");
 
@@ -53,7 +53,7 @@ const App = ({}) => {
     <div className="container">
       <div className="row">
         <div className="col-md-12 mt-4 mb-4">
-          <h1>Hello {username}</h1>
+          <h1>Hello {username}</h1> 
         </div>
       </div>
       <div className="row">
