@@ -12,11 +12,14 @@
   "author": "",
   "license": "MIT",
   "dependencies": {
+    "font-awesome": "^4.7.0",
+    "fontawesome": "^5.6.3",
     "moment": "^2.24.0",
     "nodemon": "^2.0.2",
     "parcel": "^1.12.4",
     "react": "^16.12.0",
     "react-dom": "^16.12.0",
+    "react-scrollable-list-view": "^2.0.1",
     "socket.io": "^2.3.0",
     "socket.io-client": "^2.3.0"
   },

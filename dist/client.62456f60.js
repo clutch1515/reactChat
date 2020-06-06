@@ -9875,7 +9875,12 @@ function reloadCSS() {
 }
 
 module.exports = reloadCSS;
-},{"./bundle-url":"../node_modules/parcel-bundler/src/builtins/bundle-url.js"}],"../../../../../../../node_modules/bootstrap/dist/css/bootstrap.css":[function(require,module,exports) {
+},{"./bundle-url":"../node_modules/parcel-bundler/src/builtins/bundle-url.js"}],"../node_modules/font-awesome/css/font-awesome.min.css":[function(require,module,exports) {
+var reloadCSS = require('_css_loader');
+
+module.hot.dispose(reloadCSS);
+module.hot.accept(reloadCSS);
+},{"./../fonts/fontawesome-webfont.eot":[["fontawesome-webfont.80db1567.eot","../node_modules/font-awesome/fonts/fontawesome-webfont.eot"],"../node_modules/font-awesome/fonts/fontawesome-webfont.eot"],"./../fonts/fontawesome-webfont.woff2":[["fontawesome-webfont.cda54bb3.woff2","../node_modules/font-awesome/fonts/fontawesome-webfont.woff2"],"../node_modules/font-awesome/fonts/fontawesome-webfont.woff2"],"./../fonts/fontawesome-webfont.woff":[["fontawesome-webfont.c3cf7ef2.woff","../node_modules/font-awesome/fonts/fontawesome-webfont.woff"],"../node_modules/font-awesome/fonts/fontawesome-webfont.woff"],"./../fonts/fontawesome-webfont.ttf":[["fontawesome-webfont.cf80d36a.ttf","../node_modules/font-awesome/fonts/fontawesome-webfont.ttf"],"../node_modules/font-awesome/fonts/fontawesome-webfont.ttf"],"./../fonts/fontawesome-webfont.svg":[["fontawesome-webfont.9ab71dbb.svg","../node_modules/font-awesome/fonts/fontawesome-webfont.svg"],"../node_modules/font-awesome/fonts/fontawesome-webfont.svg"],"_css_loader":"../node_modules/parcel-bundler/src/builtins/css-loader.js"}],"../../../../../../../node_modules/bootstrap/dist/css/bootstrap.css":[function(require,module,exports) {
 var reloadCSS = require('_css_loader');
 
 module.hot.dispose(reloadCSS);
@@ -43730,6 +43735,8 @@ var global = arguments[3];
 
 var _socket = _interopRequireDefault(require("socket.io-client"));
 
+require("../node_modules/font-awesome/css/font-awesome.min.css");
+
 require("bootstrap/dist/css/bootstrap.css");
 
 require("./style.css");
@@ -43833,7 +43840,11 @@ var App = function App(_ref) {
     className: "row"
   }, /*#__PURE__*/_react.default.createElement("div", {
     className: "col-md-8"
-  }, /*#__PURE__*/_react.default.createElement("h6", null, "Messages"), /*#__PURE__*/_react.default.createElement("div", {
+  }, /*#__PURE__*/_react.default.createElement("h6", null, /*#__PURE__*/_react.default.createElement("i", {
+    className: "fa fa-quote-left"
+  }), " ", /*#__PURE__*/_react.default.createElement("i", {
+    className: "fa fa-quote-right"
+  }), " Messages"), /*#__PURE__*/_react.default.createElement("div", {
     id: "messages"
   }, messages.map(function (_ref2, index) {
     var user = _ref2.user,
@@ -43843,12 +43854,12 @@ var App = function App(_ref) {
       key: index,
       className: "row mb-2"
     }, /*#__PURE__*/_react.default.createElement("div", {
-      className: "col-md-3"
-    }, (0, _moment.default)(date).format("h:mm:ss a")), /*#__PURE__*/_react.default.createElement("div", {
       className: "col-md-2"
-    }, user.name), /*#__PURE__*/_react.default.createElement("div", {
-      className: "col-md-2"
-    }, text));
+    }, "- ", user.name), /*#__PURE__*/_react.default.createElement("div", {
+      className: "col-md-10"
+    }, text), /*#__PURE__*/_react.default.createElement("div", {
+      className: "col-md-8"
+    }, (0, _moment.default)(date).format("h:mm a")));
   })), /*#__PURE__*/_react.default.createElement("form", {
     onSubmit: submit,
     id: "form"
@@ -43856,6 +43867,7 @@ var App = function App(_ref) {
     className: "input-group"
   }, /*#__PURE__*/_react.default.createElement("input", {
     type: "text",
+    placeholder: "Message",
     className: "form-control",
     onChange: function onChange(e) {
       return setMessage(e.currentTarget.value);
@@ -43868,21 +43880,27 @@ var App = function App(_ref) {
     id: "submit",
     type: "submit",
     className: "btn btn-primary"
-  }, "Send"))))), /*#__PURE__*/_react.default.createElement("div", {
+  }, /*#__PURE__*/_react.default.createElement("i", {
+    className: "fa fa-arrow-circle-up"
+  }), " Submit"))))), /*#__PURE__*/_react.default.createElement("div", {
     className: "col-md-4"
-  }, /*#__PURE__*/_react.default.createElement("h6", null, "Users"), /*#__PURE__*/_react.default.createElement("ul", {
+  }, /*#__PURE__*/_react.default.createElement("h6", null, /*#__PURE__*/_react.default.createElement("i", {
+    className: "fa fa-users"
+  }), " Users"), /*#__PURE__*/_react.default.createElement("ul", {
     id: "users"
   }, users.map(function (_ref3) {
     var name = _ref3.name,
         id = _ref3.id;
-    return /*#__PURE__*/_react.default.createElement("li", {
+    return /*#__PURE__*/_react.default.createElement("ul", {
       key: id
-    }, name);
+    }, /*#__PURE__*/_react.default.createElement("i", {
+      className: "fa fa-caret-right"
+    }), " ", name, "  ");
   })))));
 };
 
 _reactDom.default.render( /*#__PURE__*/_react.default.createElement(App, null), document.getElementById("root"));
-},{"socket.io-client":"../node_modules/socket.io-client/lib/index.js","bootstrap/dist/css/bootstrap.css":"../../../../../../../node_modules/bootstrap/dist/css/bootstrap.css","./style.css":"style.css","react":"../node_modules/react/index.js","react-dom":"../node_modules/react-dom/index.js","moment":"../node_modules/moment/moment.js"}],"../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
+},{"socket.io-client":"../node_modules/socket.io-client/lib/index.js","../node_modules/font-awesome/css/font-awesome.min.css":"../node_modules/font-awesome/css/font-awesome.min.css","bootstrap/dist/css/bootstrap.css":"../../../../../../../node_modules/bootstrap/dist/css/bootstrap.css","./style.css":"style.css","react":"../node_modules/react/index.js","react-dom":"../node_modules/react-dom/index.js","moment":"../node_modules/moment/moment.js"}],"../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
 var OldModule = module.bundle.Module;
@@ -43910,7 +43928,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "58184" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "52991" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
